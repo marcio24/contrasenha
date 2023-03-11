@@ -1,5 +1,13 @@
 let contrasenha = 0;
 let a = false;
+let resultado = "0";
+let open = false;
+
+
+document.querySelector(".form").addEventListener("submit", (e)=>{
+    e.preventDefault();
+    dados();
+});
 
 function dados(){
     contrasenha = document.querySelector('#contrasenha').value; //Obtem a String
@@ -12,10 +20,10 @@ function dados(){
             let Fbt = fBlock.split("");
             let Sbt = sBlock.split("");
 
-                if(Fbt.length == 1 && Sbt.length == 1){alert(`Senha: 00${fBlock}00${sBlock}`)};
-                if(Fbt.length == 2 && Sbt.length == 1){alert(`Senha: 0${fBlock}00${sBlock}`)};
-                if(Fbt.length == 1 && Sbt.length == 2){alert(`Senha: 00${fBlock}0${sBlock}`)};
-                if(Fbt.length == 2 && Sbt.length == 2){alert(`Senha: 0${fBlock}0${sBlock}`)};
+                if(Fbt.length == 1 && Sbt.length == 1){resultado = (`${Math.floor(Math.random() * 10)}0${fBlock}${Math.floor(Math.random() * 10)}0${sBlock}`)};
+                if(Fbt.length == 2 && Sbt.length == 1){resultado = (`${Math.floor(Math.random() * 10)}${fBlock}${Math.floor(Math.random() * 10)}0${sBlock}`)};
+                if(Fbt.length == 1 && Sbt.length == 2){resultado = (`${Math.floor(Math.random() * 10)}0${fBlock}${Math.floor(Math.random() * 10)}${sBlock}`)};
+                if(Fbt.length == 2 && Sbt.length == 2){resultado = (`${Math.floor(Math.random() * 10)}${fBlock}${Math.floor(Math.random() * 10)}${sBlock}`)};
         }
 
         else if(a.checked == true){
@@ -24,9 +32,17 @@ function dados(){
             let Fbt = fBlock.split("");
             let Sbt = sBlock.split("");
 
-                if(Fbt.length == 1 && Sbt.length == 1){alert(`Senha: A00${fBlock}00${sBlock}`)};
-                if(Fbt.length == 2 && Sbt.length == 1){alert(`Senha: A0${fBlock}00${sBlock}`)};
-                if(Fbt.length == 1 && Sbt.length == 2){alert(`Senha: A00${fBlock}0${sBlock}`)};
-                if(Fbt.length == 2 && Sbt.length == 2){alert(`Senha: A0${fBlock}0${sBlock}`)};
+                if(Fbt.length == 1 && Sbt.length == 1){resultado = (`A${Math.floor(Math.random() * 10)}0${fBlock}${Math.floor(Math.random() * 10)}0${sBlock}`)};
+                if(Fbt.length == 2 && Sbt.length == 1){resultado = (`A${Math.floor(Math.random() * 10)}${fBlock}${Math.floor(Math.random() * 10)}0${sBlock}`)};
+                if(Fbt.length == 1 && Sbt.length == 2){resultado = (`A${Math.floor(Math.random() * 10)}0${fBlock}${Math.floor(Math.random() * 10)}${sBlock}`)};
+                if(Fbt.length == 2 && Sbt.length == 2){resultado = (`A${Math.floor(Math.random() * 10)}${fBlock}${Math.floor(Math.random() * 10)}${sBlock}`)};
         }
+        abreModal();
+
+}
+function abreModal() {
+    $("#modal-mensagem").modal();
+    let element = document.querySelector(".conteudo");
+    element.innerHTML = `Senha: ${resultado}`;
+    navigator.clipboard.writeText(resultado);
 }
