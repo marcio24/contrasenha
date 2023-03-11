@@ -45,4 +45,5 @@ function abreModal() {
     let element = document.querySelector(".conteudo");
     element.innerHTML = `Senha: ${resultado}`;
     navigator.clipboard.writeText(resultado);
+    document.querySelector('#contrasenha').value='';
 }
