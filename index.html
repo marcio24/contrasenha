@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!--CSS Source-->
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="style.css">
     
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3427/3427189.png" type="image/x-icon">
     <!--Bootstrap Sources-->
@@ -17,36 +16,41 @@
 </head>
 <body>
     <!--Formulário-->
-    <div class="formulario">
-        <p class="titulo">Acesso Configurações</p>
-        <form class="form">
-            <div class="campos">
-          <label for=""><span>Contrasenha: </span> <input required type="number" id="contrasenha" inputmode="numeric" maxlength="4"></label>
-           <label for=""><input type="checkbox" id="A"><span>Adicionar letra "A"</span></label>
+    <div class="content" style="display: none">
+        <div class="formulario">
+            <p class="titulo">Acesso Configurações</p>
+            <form class="form">
+                <div class="campos">
+            <label for=""><span>Contrasenha: </span> <input required type="number" id="contrasenha" inputmode="numeric" maxlength="4"></label>
+            <label for=""><input type="checkbox" id="A"><span>Adicionar letra "A"</span></label>
+            </div>
+            <button class="botao" type="submit">Enviar</button>
+            </form>
         </div>
-        <button class="botao" type="submit">Enviar</button>
-        </form>
-    </div>
-    <!-- FinalFormulário-->
+        <!-- FinalFormulário-->
 
-    <!-- Teste Modal-->
-    <div class="modal fade" id="modal-mensagem">
-        <div class="modal-dialog">
-             <div class="modal-content">
-                 <div class="modal-header">
-                     <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-                     <h4 class="modal-title">Senha copiada para a área de transferência!</h4>
-                 </div>
-                 <div class="modal-body">
-                     <div class="conteudo"></div>
-                 </div>
-                 <div class="modal-footer">
-                     <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Fechar</button>
-                 </div>
-             </div>
-         </div>
+        <!-- Teste Modal-->
+        <div class="modal fade" id="modal-mensagem">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                        <h4 class="modal-title">Senha copiada para a área de transferência!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="conteudo"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Final Modal-->
+        <script src="Index.js"></script>
      </div>
-     <!-- Final Modal-->
-     <script src="Index.js"></script>
+     <div id="loading" style="display: block">
+        <video src="Loading.webm" autoplay muted class="video"></video>
+    </div>
 </body>
 </html>
