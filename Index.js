@@ -47,11 +47,9 @@ function abreModal() {
     navigator.clipboard.writeText(resultado);
     document.querySelector('#contrasenha').value='';
 }
-var i = setInterval(function () {
-    clearInterval(i);
 
-    // O código desejado é apenas isto:
+var i = setInterval(function loading() {
+    clearInterval(i);
     document.getElementById("loading").style.display = "none";
     document.querySelector(".content").style.display = "block";
-
-}, 4500);
+}, 2000);
