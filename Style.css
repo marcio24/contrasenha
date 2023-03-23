@@ -5,12 +5,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     height: 100vh;
     background: linear-gradient(90deg,#006eff, rgb(0, 221, 173), rgb(0, 0, 241),rgb(218, 0, 0));
     background-size: 250% 250%;
     animation: gradient 30s ease infinite;
-    min-width: 860px;
-    overflow: hidden;
+    min-width: 60px;
     backdrop-filter: blur(8px);
 }
 .formulario{
@@ -24,7 +24,9 @@ body{
     flex-direction: column;
     min-width: 256px;
     min-height: 264px;
+    transition-duration: .6s;
 }
+
 .form{
     background-color: rgba(228, 228, 228, 0.493);
     display: flex;
@@ -36,11 +38,26 @@ body{
     flex-direction: column;
     min-width: 214px;
     min-height: 171px;
+    transition-duration: .6s;
+}
+.frame{
+    margin-left: 20px;
+    border-radius: 20px;
+    width: 440px; 
+    height: 440px;
+    transition-duration: .6s;
+}
+
+.frame:hover{
+    width: 640px; 
+    height: 640px;
+    transition-duration: .6s;
+    transition-delay: .5s;
 }
 .campos{
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: 13vw;
     height: 15vh;
     justify-content: center;
     align-items: center;
@@ -72,7 +89,8 @@ span{
 }
 label{
     margin-bottom: 15px;
-    width: 200px;
+    width: max-content;
+    flex-wrap: wrap;
     display: flex;
     flex-direction: column;
 }
@@ -85,19 +103,17 @@ label{
 }
 button.botao{
     transform: translateY(20px);
-    width: 10vw;
+    width: max-content;
+    padding: 10px;
+    align-items: center;
     height: max(15px, 40px);
     border: none;
     border-radius: 20px;
     color: gray;
+    background-color: white;
     font-size: max(5px, 15px);
     font-family: sans-serif;
     font-weight: bold;
-}
-button:hover{
-    color: black;
-    font-size: 18px;
-    transition-duration: .4s;
 }
 .conteudo{
     font-family: sans-serif;
@@ -135,16 +151,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     background: linear-gradient(90deg,#006eff, rgb(0, 221, 173), rgb(0, 0, 241),rgb(218, 0, 0));
     background-size: 250% 250%;
     animation: gradient 30s ease infinite;
-    overflow: hidden;
     backdrop-filter: blur(8px);
 }
 .formulario{
     width: 350px;
-    height: 350px;
+    height: 390px;
     background-color: rgba(228, 228, 228, 0.336);
     display: flex;
     justify-content: center;
@@ -153,6 +169,7 @@ body{
     flex-direction: column;
     min-width: 256px;
     min-height: 264px;
+    transition-duration: .6s;
 }
 .form{
     background-color: rgba(228, 228, 228, 0.493);
@@ -165,12 +182,29 @@ body{
     flex-direction: column;
     min-width: 214px;
     min-height: 171px;
+    transition-duration: .6s;
     
+}
+.frame{
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 340px; 
+    height: 340px;
+    transition-duration: .6s;
+}
+.frame:hover{
+    width: 440px; 
+    height: 440px;
+    transition-duration: .6s;
+    transition-delay: .5s;
+}
+.fecha-frame{
+    width: 200px;
 }
 .campos{
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: 15vw;
     height: 15vh;
     justify-content: center;
     align-items: center;
@@ -178,7 +212,7 @@ body{
 input#contrasenha{
     border-radius: 20px;
     border:none;
-    width: 180px;
+    width: 13vw;
     height: 35px;
     font-size: 18px;
     font-weight: bold;
@@ -202,7 +236,7 @@ span{
 }
 label{
     margin-bottom: 15px;
-    width: 200px;
+    width: max-content;
     display: flex;
     flex-direction: column;
 }
@@ -215,11 +249,14 @@ label{
 }
 button.botao{
     transform: translateY(20px);
-    width: 100px;
+    width: max-content;
+    padding: 10px;
+    align-items: center;
     height: max(15px, 40px);
     border: none;
     border-radius: 20px;
     color: gray;
+    background-color: white;
     font-size: max(5px, 15px);
     font-family: sans-serif;
     font-weight: bold;
@@ -265,6 +302,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     background: linear-gradient(90deg,#006eff, rgb(0, 221, 173), rgb(0, 0, 241),rgb(218, 0, 0));
     background-size: 250% 250%;
@@ -274,7 +312,7 @@ body{
 }
 .formulario{
     width: 350px;
-    height: 350px;
+    height: 390px;
     background-color: rgba(228, 228, 228, 0.336);
     display: flex;
     justify-content: center;
@@ -283,6 +321,7 @@ body{
     flex-direction: column;
     min-width: 256px;
     min-height: 264px;
+    transition-duration: .6s;
 }
 .form{
     background-color: rgba(228, 228, 228, 0.493);
@@ -295,7 +334,23 @@ body{
     flex-direction: column;
     min-width: 214px;
     min-height: 171px;
-    
+    transition-duration: .6s;
+}
+.frame{
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 340px; 
+    height: 340px;
+    transition-duration: .6s;
+}
+.frame:hover{
+    width: 440px; 
+    height: 440px;
+    transition-duration: .6s;
+    transition-delay: .5s;
+}
+.fecha-frame{
+    width: 200px;
 }
 .campos{
 display: flex;
@@ -331,10 +386,10 @@ span{
     min-height: 22px;
 }
 label{
-margin-bottom: 15px;
-width: 200px;
-display: flex;
-flex-direction: column;
+    margin-bottom: 15px;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
 }
 .titulo{
     transform: translateY(-14px);
@@ -345,7 +400,9 @@ flex-direction: column;
 }
 button.botao{
     transform: translateY(20px);
-    width: 100px;
+    width: max-content;
+    padding: 10px;
+    align-items: center;
     height: max(15px, 40px);
     border: none;
     border-radius: 20px;
@@ -354,11 +411,6 @@ button.botao{
     font-size: max(5px, 15px);
     font-family: sans-serif;
     font-weight: bold;
-}
-button:hover{
-    color: black;
-    font-size: 18px;
-    transition-duration: .4s;
 }
 .conteudo{
     font-family: sans-serif;

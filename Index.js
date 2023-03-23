@@ -6,10 +6,11 @@ let open = false;
 
 document.querySelector(".form").addEventListener("submit", (e)=>{
     e.preventDefault();
-    dados();
+    dados(e);
 });
 
-function dados(){
+function dados(e){
+    
     contrasenha = document.querySelector('#contrasenha').value; //Obtem a String
     tratado = contrasenha.split(""); //Separa os caracteres em arrays
     a = document.querySelector('#A'); // Obtem o status do Checkbox
@@ -47,9 +48,24 @@ function abreModal() {
     navigator.clipboard.writeText(resultado);
     document.querySelector('#contrasenha').value='';
 }
+function Openframe(){
 
-var i = setInterval(function loading() {
+    document.querySelector(".dframe").style.display = "block";
+    document.querySelector(".fecha-frame").style.display = "block";
+
+    document.querySelector(".abre-frame").style.display = "none";
+}
+function Closeframe(){
+    
+    document.querySelector(".dframe").style.display = "none";
+    document.querySelector(".fecha-frame").style.display = "none";
+
+    document.querySelector(".abre-frame").style.display = "block";
+}
+let i = setInterval(function loading() {
     clearInterval(i);
     document.getElementById("loading").style.display = "none";
     document.querySelector(".content").style.display = "block";
-}, 2000);
+}, 3000);
+
+//document.querySelector(".dframe").style.display = "block";

@@ -15,8 +15,9 @@
     <title>Retaguarda-Pass</title>
 </head>
 <body>
-    <!--Formulário-->
+
     <div class="content" style="display: none">
+        <!--Formulário-->
         <div class="formulario">
             <p class="titulo">Acesso Configurações</p>
             <form class="form">
@@ -26,9 +27,10 @@
             </div>
             <button class="botao" type="submit">Enviar</button>
             </form>
+            <button class="botao abre-frame" onclick="Openframe()" style="display: block">Ver Mapa de ataques</button>
+            <button class="botao fecha-frame" onclick="Closeframe()" style="display: none">Fechar Mapa de ataques</button>
         </div>
         <!-- FinalFormulário-->
-
         <!-- Teste Modal-->
         <div class="modal fade" id="modal-mensagem">
             <div class="modal-dialog">
@@ -47,12 +49,15 @@
             </div>
         </div>
         <!-- Final Modal-->
-        
      </div>
-     
-     <div id="loading">
-        <img src="https://gifs.eco.br/wp-content/uploads/2021/08/imagens-e-gifs-de-loading-0.gif" class="loading">
-    </div>
+        <!--Tela de Loading-->
+        <div id="loading">
+            <img src="https://gifs.eco.br/wp-content/uploads/2021/08/imagens-e-gifs-de-loading-0.gif" class="loading">
+        </div>
+        <!--Final da tela de Loading-->
+        <div class="dframe" style="display: none">
+        <iframe class="frame" src="https://cybermap.kaspersky.com/en/widget/dynamic/dark"   frameborder="0"></iframe>
+        </div>  
     <script src="./Index.js"></script>
 </body>
 </html>
