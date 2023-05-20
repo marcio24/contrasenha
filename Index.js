@@ -62,10 +62,13 @@ function Closeframe(){
 
     document.querySelector(".abre-frame").style.display = "block";
 }
+
 let i = setInterval(function loading() {
     clearInterval(i);
     document.getElementById("loading").style.display = "none";
     document.querySelector(".content").style.display = "block";
-}, 3000);
+}, 500);
+
+
 
 //document.querySelector(".dframe").style.display = "block";
